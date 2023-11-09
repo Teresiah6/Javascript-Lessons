@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8d</title>
+  </head>
+  <body>
+    <script>
+    function comparePrice(product1, product2){
+     product1 = {
+        name: 'shirt',
+        price: 1400
+      };
+     product2 = {
+        name: 'trouser',
+        price: 800
+      };
+      if(product1.price < product2.price){
+        return product1;
+      }else{
+        return product2;
+      }
+    }
+    console.log(comparePrice());
+
+    </script>
+  </body>
+</html>
