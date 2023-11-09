@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart quantity</title>
+  </head>
+  <body>
+    <button onclick="
+      console.log(`Cart Quantity: ${cartQuantity}`);
+      "> Show Quantity</button>
+    <button onclick="if (cartQuantity + 1 <= 10){
+      console.log(`Cart Quantity: ${cartQuantity += 1}`)
+    }  else{alert('The cart is full. Don\'t update')};">
+    Add to Cart
+  </button>
+    <button onclick="
+    if (cartQuantity + 2 <= 10){
+      console.log(`Cart Quantity: ${cartQuantity +=2}`);
+      } else {
+        alert('The cart is full. Don\'t update');
+      }">+2</button>
+    <button 
+    onclick= "if(cartQuantity + 3 <= 10){
+      console.log(`Cart Quantity: ${cartQuantity +=3}`);
+    }else{
+      alert('The cart is full. Don\'t update');
+    }">
+    +3
+    </button>
+    <button 
+    onclick=" if (cartQuantity + 4 <= 10){
+      console.log(`Cart Quantity: ${cartQuantity+=4}`);
+    }else{
+      alert('The cart is full. Don\'t update');
+    }
+      ">+4
+      </button>
+    <button onclick=" if(cartQuantity + 5 <= 10){
+      console.log(`Cart Quantity: ${cartQuantity+=5}`);
+    }else{
+      alert('The cart is full. Don\'t update');
+    }
+    ">+5</button>
+    <button onclick=" console.log('Cart was reset.'); console.log(`Cart Quantity: ${cartQuantity = 0}`);">Reset Cart</button>
+    <button onclick="if(cartQuantity - 1 >= 0){
+      console.log(`Cart Quantity: ${--cartQuantity}`);
+    }else{
+      alert('Not enough items in the cart. Don\'t update the quantity.');
+    }">Remove from cart</button>
+    <button onclick="if(cartQuantity - 2 >= 0)  {
+      console.log(`Cart Quantity: ${cartQuantity-=2}`)}
+      else{
+        alert('Not enough items in the cart. Don\'t update the quantity.');
+      };"> -2</button>
+    <button onclick=" if(cartQuantity - 3 >= 0){
+       console.log(`Cart Quantity: ${cartQuantity -=3}`);
+    } else{
+      alert('Not enough items in the cart. Don\'t update the quantity.');
+    }
+   "> -3</button>
+    <script>
+      let cartQuantity = 0;
+      console.log(typeof cartQuantity);
+
+
+
+    </script>
+  </body>
+</html>

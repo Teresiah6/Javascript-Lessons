@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>Hello</button>
+    <button class="js-button">Second button</button>
+    <script>
+      //document is an object and so is body
+      //changes everything in the html
+     // document.body.innerHTML = 'hello';
+      //changing the title
+     // document.title = 'Good job';
+     /*console.log(document.title);
+     document.title = 'Changed';
+
+     console.log(document.body); // shows body tags
+     console.log(typeof document.body);
+
+     console.log(document.body.innerHTML); // shows everything inside the body including script
+
+     //document.body.innerHTML = 'changed';
+     document.body.innerHTML = '<button>Good job!</button';
+      */
+     //method in dom
+     console.log(document.querySelector('button').innerHTML); //gets teh first button in the page using .innerHTML gives us what's inside the button
+
+     document.querySelector('button')
+      .innerHTML = 'changed';
+
+      //console.log(document.querySelector('.js-button'));
+      const buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement);
+
+    </script>
+  </body>
+</html>
