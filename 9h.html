@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9h</title>
+  </head>
+  <body>
+    <input placeholder="Type something" class ="js-input"
+    onkeyup="console.log(event.key); updateText();" onclick="updateText()"> 
+    <p class="js-updated-text"></p>
+    <script>
+      function updateText(){
+        const inputElement = document.querySelector('.js-input');
+        document.querySelector('.js-updated-text').innerHTML = inputElement.value;
+      }
+    </script>
+  </body>
+</html>
