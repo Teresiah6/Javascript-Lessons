@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <Title>Objects</Title></header>
+  <body>
+    <script>
+     /* const product = {
+        name: 'socks',
+        price: 1090
+      };
+      //check type of product
+      console.log(typeof product);
+      
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+      //changing value of a property
+      product.name = 'cotton socks';
+      console.log(product);
+      //adding new property value pairs
+      product.shirt = 2000;
+      product.newProperty = true;
+      console.log(product);
+      //removing a property
+      delete product.newProperty;
+      console.log(product);
+      */
+     const product2 = {
+      name: 'shirt',
+      //adding properties with bracket notation
+      ['delivery-time']: '1 day', //brackets when writing string are optional
+      rating : { //this is a nested object
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function1 (){
+        console.log('function inside object');
+      }
+
+     };
+     console.log(product2);
+     console.log(product2.name);
+     console.log(product2['name']);
+     //examples of properties that don't work with dot-notation
+     //in this example js thinks - is a minus hence it's trying to do math
+     //console.log(product2.delivery-time);
+     //using bracket notation
+    /* console.log(product2['delivery-time']);
+     console.log(product2.rating.count);
+     console.log(product2.rating);
+     //accessing value associated with the function
+     console.log(product2.fun);
+     //we can also the function in the brackets
+     product2.fun();
+     //confirming console is am object in JS
+     console.log(typeof console);
+     // confirming console.log is a method
+     console.log(typeof console.log);
+
+     //converting product 2 to JSOn using JSON built-in obj
+     console.log(JSON.stringify(product2)); // displays object using JSON syntax
+
+     console.log(typeof JSON.stringify(product2));
+
+     //Converting JSON to JSON obejct
+     const JSONString = JSON.stringify(product2);
+     console.log(JSON.parse(JSONString));
+*/
+     console.log('hello'.length);
+     console.log('hello'.toUpperCase());
+
+     const object1 = {
+      message: 'hello'
+     };
+     //no copy is made just points to the reference in comp's memory
+     const object2 = object1;
+
+     object1.message = 'Good job!'
+     console.log(object1);
+     console.log(object2);
+
+     //comparing objects 
+     const object3 = {
+      message: 'Good job'
+     };
+     console.log(object3 === object1); //false
+     console.log(object2 === object1); //true as they ahve teh same reference
+
+     const object4 = {
+      message: 'Good job',
+      price: 799
+     };
+     //getting message out
+     //const message = object4.message;
+     //shortcut for this is /destructuring
+     const {message, price} = object4;
+     console.log(message);
+     console.log(price);
+
+     const object5 = {
+      //message : message
+      message, 
+     /* method: function function1(){
+        console.log('method');
+      }*/
+      method(){
+        console.log('method');
+      }
+     };
+     console.log(object5);
+     object5.method();
+
+     
+    </script>
+  </body>
+</html>

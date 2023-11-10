@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7e</title>
+  </head>
+  <body>
+    <script>
+  
+       
+       function convertToFahrenheit(celsius){
+        const fahrenheit = (celsius * 9/5) + 32;
+        //console.log(fahrenheit);
+        return fahrenheit;
+      }
+       function convertToCelsius(fahrenheit){
+        const celsius = (fahrenheit - 32) * 5/9;
+        //console.log(celsius);
+        return celsius;
+      }
+      function convertTemperature(degrees, unit){
+        if(unit === 'C'){
+          const result =convertToFahrenheit(degrees);
+          return `${result}F`;
+         
+        }else if(unit === 'F'){
+          const result = convertToCelsius (degrees);
+          return `${result}C`;
+          
+        }
+        
+
+       }
+      console.log(convertTemperature(25, 'C'));
+      console.log(convertTemperature(86, 'F'));
+    </script>
+  </body>
+</html>
