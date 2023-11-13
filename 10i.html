@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <style>
+    body{
+      background-color: black;
+    }
+    .numbers{
+      border: none;
+      border-radius: 60px;
+      background-color: gray;
+      padding:5px;
+      margin:1px;
+      width: 30px;
+      height:30px;
+      color: white;
+      font-size: 8px;
+   
+      
+
+    }
+    .signs{
+      border: none;
+      border-radius: 120px;
+      padding: 5px;
+      width: 30px;
+      height:30px;
+      background-color: orange;
+      color: white;
+
+    }
+    .result{
+      color: white;
+    }
+  </style>
+  <body>
+    <!-- Code changes are at the bottom. -->
+    <!--Need to learn more on localstorage-->
+    <p class="js-display-calculation result"></p>
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      " class="numbers">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+      " class="numbers">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      " class="numbers">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      " class="signs">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      " class="numbers">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      " class="numbers" >5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      " class="numbers">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      " class="signs">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      " class="numbers">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      " class="numbers">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      " class="numbers">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      " class="signs">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      " class="numbers"> 0</button>
+
+      <button onclick="
+        updateCalculation('.');
+      " class="numbers">.</button>
+
+      <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+        displayCalculation();
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      " class="numbers">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+      " class="signs">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+        displayCalculation();
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+        
+      "class="numbers">Clear</button>
+    </p>
+
+    <script>
+      let calculation = localStorage.getItem('calculation') || '';
+
+      displayCalculation();
+      function displayCalculation(){
+        document.querySelector('.js-display-calculation').innerHTML = calculation;
+
+      }
+      
+
+      function updateCalculation(value) {
+        calculation += value;
+        console.log(calculation);
+        displayCalculation();
+        localStorage.setItem('calculation', calculation);
+      }
+
+      // Optional: you can also create a function in order
+      // to reuse this code.
+      function saveCalculation() {
+        localStorage.setItem('calculation', calculation);
+      }
+    </script>
+  </body>
+</html>
