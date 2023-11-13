@@ -1,0 +1,30 @@
+body{
+  background-color: black;
+}
+.numbers{
+  border: none;
+  border-radius: 60px;
+  background-color: gray;
+  padding:5px;
+  margin:1px;
+  width: 30px;
+  height:30px;
+  color: white;
+  font-size: 8px;
+
+  
+
+}
+.signs{
+  border: none;
+  border-radius: 120px;
+  padding: 5px;
+  width: 30px;
+  height:30px;
+  background-color: orange;
+  color: white;
+
+}
+.result{
+  color: white;
+}

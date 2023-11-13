@@ -1,0 +1,16 @@
+    .toggle-btn, 
+    .toggle-btn2,
+    .toggle-btn3{
+      background-color: rgb(230, 230, 230);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .is-toggled, .is-toggled2, .is-toggled3{
+      background-color: black;
+      color: white;
+     
+    }
