@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11h</title>
+  </head>
+  <body>
+    <script>
+      function addNum(array,num){
+        //new array created
+        let arrayToAdd = [];
+        for (let i = 0; i <= array.length - 1; i++){
+          let result = array[i];
+          arrayToAdd.push(result += num);
+        }
+        return arrayToAdd;
+      }
+      console.log(addNum([1, 2, 3], 2));
+      console.log(addNum([1,2,3], 3));
+      console.log(addNum([-2, -1, 0, 99], 2));
+    </script>
+  </body>
+</html>
