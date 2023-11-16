@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11m</title>
+  </head>
+  <body>
+    <script>
+      function minMax(nums){
+        const obj = 
+        {min: nums[0],
+        max: nums[0]
+          };
+        for(let i = 0; i <= nums.length - 1; i++){
+          const number = nums[i];
+          
+          if (obj.min === null ||  number < obj.min ){
+           // console.log(nums[i]);
+            obj.min = number; 
+        } 
+          if(obj.max === null || number > obj.max){
+            obj.max = number;
+          }
+         
+    
+        }
+        return obj;
+      }
+      console.log(minMax([1, -3, 5]));
+      console.log(minMax([-2, 3, -5, 7, 10]));
+      console.log(minMax([])); //problem here undefined instead of null
+      console.log(minMax([3]));
+    </script>
+  </body>
+</html>
