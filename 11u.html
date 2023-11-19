@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11t</title>
+  </head>
+  <body>
+    <script>
+      function removeEggs(foods){
+        let newArray = [];
+        let eggsRemoved = 0;
+        //create original copy of foods array
+        const foodsEdit = foods.slice();
+        
+        const foodsNew = foodsEdit.reverse();
+        for(let i = 0; i < foodsNew.length; i++){
+          
+          if(foodsNew[i] === 'egg' && eggsRemoved < 2){
+            eggsRemoved++;
+            continue;
+          }
+            newArray.push(foodsNew[i]);
+        
+         // console.log(newArray);
+         //reverse the result to ensure the array is in the right order
+          
+          
+        }
+        return newArray.reverse();
+        
+
+      }
+      console.log(removeEggs(['egg', 'apple', 'egg', 'egg', 'ham']));
+    </script>
+  </body>
+</html>
