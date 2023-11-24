@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12f</title>
+  </head>
+  <body>
+    <button class="js-button">Add to Cart</button>
+    <p class="js-text"></p>
+    <script>
+      let t;
+      document.querySelector('.js-button')
+      .addEventListener('click',()=>{
+        addToText();
+      });
+      function addToText(){
+        document.querySelector('.js-text').innerHTML = 'Added';
+//cleared just incase and so as not to remove the message too fast
+
+        clearTimeout(t);
+
+        t =setTimeout(function(){
+          document.querySelector('.js-text').innerHTML = '';
+        }, 2000);
+        
+      
+        
+      }
+
+    </script>
+  </body>
+</html>

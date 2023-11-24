@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12c</title>
+  </head>
+  <body>
+    <button class="js-button" >Start</button>
+    <script>
+      let button = document.querySelector('.js-button');
+      button.addEventListener('click', ()=>{
+        changeToFinished();
+      });
+      function changeToFinished(){
+        
+        setTimeout(()=>{
+          button.innerHTML = 'Finished';
+        }, 1000);
+      }
+      
+    </script>
+  </body>
+</html>

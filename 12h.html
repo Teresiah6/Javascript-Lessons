@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <button class="js-add-btn"
+    >Add</button>
+    <button class="js-remove-btn" 
+    >Remove</button>
+    <script>
+      document.querySelector('.js-add-btn')
+        .addEventListener('click',()=>{
+          addMessages();
+        });
+      
+      document.querySelector('.js-remove-btn')
+        .addEventListener('click', ()=>{
+          removeMessages();
+        })
+      let message = 2;
+      setInterval(()=>{
+        document.title = `(${message}) New Messages`;
+      }, 1000);
+
+      function addMessages(){
+        message++;
+      }
+
+      function removeMessages(){
+        message--;
+      }
+    </script>
+  </body>
+</html>
